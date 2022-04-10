@@ -23,3 +23,4 @@ x=3
 a<- dgeom(x,p)
 print(a)
 ```
+![alt text](https://github.com/Naufalar10/P1_Probstat_E_5025201112/blob/main/1a.PNG)
