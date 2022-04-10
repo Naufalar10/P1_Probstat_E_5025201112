@@ -23,6 +23,11 @@ x=3
 a<- dgeom(x,p)
 print(a)
 ```
+Hasil :
+
+![ss1][ss1a]
+
+[ss1a]: probstat_1/1a.png
 
 
 
@@ -33,6 +38,10 @@ Fungsi berisi banyaknya data acak dan probabilitasnya
 ```
 mean(rgeom(n = 10000, prob = p) == 3)
 ```
+Hasil :
+![ss1][ss1b]
+
+[ss1b]: probstat_1/1b.png
 
 ## 1c
 Kesimpulan yang dapat untuk poin A nilai sudah tetap di satu nilai. sedangkan poin B nilai masih bertukar terus karena random. poin B lebih digunakan untuk keperluan sampling.
@@ -44,6 +53,10 @@ gunakan fungsi hist() dengan parameter fungsi rgeom().
 hist(rgeom(n = 10000,prob = p))
 ```
 
+Hasil :
+![ss1][ss1d]
+
+[ss1d]: probstat_1/1d.png
 ## 1e
 varians dan rataan dapat didapatkan dengan rumus dibawah ini.
 ```
@@ -62,6 +75,11 @@ variansgeometrik <- function(p){
 variansgeometrik(p)
 ```
 
+Hasil :
+![ss1][ss1e]
+
+[ss1e]: probstat_1/1e.png
+
 # SOAL 2
 Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
 a. Peluang terdapat 4 pasien yang sembuh.
@@ -78,11 +96,20 @@ x = 4
 probability = dbinom(x,n,prob = p, log = FALSE)
 ```
 
+Hasil :
+![ss1][ss2a]
+
+[ss2a]: probstat_1/2a.png
 ## 2b
 histogram digambarkan dengan cara berikut
 ```
 hist(rbinom(x,n,prob=p), xlab = "x", ylab = "frekuensi", main = "Histogram of Binomial")
 ```
+
+Hasil :
+![ss1][ss2b]
+
+[ss2b]: probstat_1/2b.png
 
 ## 2c
 varians dan rataan dengan cara berikut
@@ -100,6 +127,11 @@ rataanbinomial(20, 0.2)
 variansbinomial(20, 0.2,0.8)
 ```
 
+Hasil :
+![ss1][ss2c]
+
+[ss2c]: probstat_1/2c.png
+
 # SOAL 3
 Diketahui data dari sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis
 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)
@@ -114,7 +146,10 @@ dapat diselesaikan dengan cara berikut
 ```
 dpois(6,4.5)
 ```
+Hasil :
+![ss1][ss3a]
 
+[ss3a]: probstat_1/3d.png
 ## 3b
 histogram dapat dibuat dengan cara berikut
 ```
@@ -135,6 +170,12 @@ set.seed(1)
          title ='simulasi kelahiran bayi pada 365 hari dengan Pois(lamda=4.5)' )+
     theme_bw()
 ``` 
+
+Hasil :
+![ss1][ss3b]
+
+[ss3b]: probstat_1/3a.png
+
 ## 3c
 Poin A dan B cenderung sama, karena nilai dari poin A sendiri didapat dari range nilai poin B. Range dari B dapat dilihat pada plot yang telah terbentuk. Dari sana, nilai dari A berada di dalam range B.
 
@@ -156,6 +197,10 @@ varianspoisson <- function(lamda){
 rataanpoisson(3.5)
 varianspoisson(3.5)
 ```
+Hasil :
+![ss1][ss3d]
+
+[ss3d]: probstat_1/3b.png
 
 # SOAL 4
 Diketahui nilai x = 2 dan v = 10. Tentukan:
@@ -171,6 +216,10 @@ v=10
 dchisq(x,v)
 ```
 
+Hasil :
+![ss1][ss4a]
+
+[ss4a]: probstat_1/4a.png
 ## 4b
 histogram dapat digambarkan sebagai berikut
 ```
@@ -183,7 +232,10 @@ hist(y,
 curve(dchisq(x, df = 10), from = 0, to = 25, 
       n = 100, col= 'red', lwd=2, add = T)
 ```
+Hasil :
+![ss1][ss4b]
 
+[ss4b]: probstat_1/4b.png
 ## 4c
 nilai varians dan rataan dapat dicari dengan cara
 ```
@@ -201,6 +253,11 @@ rataanchisq(v)
 varianschisq(v)
 ```
 
+Hasil :
+![ss1][ss4c]
+
+[ss4c]: probstat_1/4c.png
+
 # SOAL 5
 Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan
 a. Fungsi Probabilitas dari Distribusi Exponensial
@@ -216,6 +273,11 @@ dapat diselesaikan dengan cara berikut
 probability = dexp(1, rate = 3)
 ```
 
+Hasil :
+![ss1][ss5a]
+
+[ss5a]: probstat_1/5a.png
+
 ## 5b
 histogram dibuat dengan cara berikut
 ```
@@ -226,6 +288,10 @@ hist(rexp(100,3))
 hist(rexp(1000,3))
 hist(rexp(10000,3))
 ```
+Hasil :
+![ss1][ss5b]
+
+[ss5b]: probstat_1/5b.png
 
 ## 5c
 varians dan rataan dapat dicari dengan cara berikut
@@ -240,6 +306,10 @@ sim_rowmean <- apply(simdata,1,mean)
 simdata_mean <- mean(sim_rowmean)
 sim_var <- var(sim_rowmean)
 ```
+Hasil :
+![ss1][ss5c]
+
+[ss5c]: probstat_1/5c.png
 
 # SOAL 6
 Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan
@@ -283,6 +353,10 @@ probability2
 probability <- probability2 - probability1
 plot(data)
 ```
+Hasil :
+![ss1][ss6a]
+
+[ss6a]: probstat_1/6a.png
 
 ## 6b 
 diselesaikan dengan cara berikut
@@ -290,6 +364,10 @@ diselesaikan dengan cara berikut
 breaks = 50
 hist(data, breaks, main = "5025201112_Naufal Ariq Putra Yosyam_Probstat_E_DNhistogram")
 ```
+Hasil :
+![ss1][ss6b]
+
+[ss6b]: probstat_1/6b.png
 
 ## 6c
 varians diselesaikan dengan cara
@@ -297,3 +375,7 @@ varians diselesaikan dengan cara
 variance = (sd(data)) ^ 2
 variance
 ```
+Hasil :
+![ss1][ss6c]
+
+[ss6c]: probstat_1/6c.png
